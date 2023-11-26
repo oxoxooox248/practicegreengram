@@ -44,16 +44,21 @@ public class FeedController {
     })
     public List<FeedSelVo> getFeedAll(int page, int loginedIuser,
                                       @RequestParam(required=false, defaultValue="0") int targetIuser) {
-        final int ROW_COUNT = 30;
+        final int ROW_COUNT = 30;//한 페이지에 피드 30개
         return service.getFeedAll(FeedSelDto.builder().
                 loginedIuser(loginedIuser).targetIuser(targetIuser).
                 startIdx((page-1) * ROW_COUNT).rowCount(ROW_COUNT).build());
+        //select 실행에 필요한 값들을 가지고 있는 FeedSelDto를 builder로 생성
+        //FeedSelDto 확인
+        //프로필 사진을 클릭하지 않으면 targetIuser=0(defaultvalue)
     }
     @DeleteMapping
     @Operation(summary = "피드 삭제", description = "로그인한 유저가 실행하는 피드 삭제 처리" +
             "(해당 피드에 대한 좋아요, 사진, 댓글도 모두 삭제 처리)")
     public ResVo delFeed(FeedDelDto dto) {
         return service.delFeed(dto);
+        //댓글이 없거나 그 유저가 쓴글이 아니면 NULL > result에 0을 담은 ResVo객체를 리턴
+        //삭제 완료 시 result에 1을 담은 ResVo객체를 리턴
     }
     @GetMapping("/fav")
     @Operation(summary = "좋아요 처리", description = "Toggle로 처리함")
@@ -72,12 +77,14 @@ public class FeedController {
     @Operation(summary = "댓글 작성", description = "로그인한 유저가 작성하는 댓글 처리")
     public ResVo postComment(@RequestBody FeedCommentInsDto dto) {
         return service.postComment(dto);
+        //성공 시 result에 pk(ifeedComment)를 담아서 리턴
     }
     @GetMapping("/comment")
     @Operation(summary = "댓글 더보기", description = "댓글 더보기 클릭 시 나머지 댓글까지 전체 보기")
     @Parameter(name = "ifeed", description = "대상 피드")
     public List<FeedCommentSelVo> getCommentAll(int ifeed) {
         return service.getCommentAll(ifeed);
+        //해당 피드(ifeed)의 더보기 클릭 시 실행
     }
     @DeleteMapping("/comment")
     @Operation(summary = "댓글 삭제", description = "로그인한 유저가 실행하는 댓글 삭제 처리")
@@ -91,5 +98,7 @@ public class FeedController {
                 .ifeedComment(ifeedComment)
                 .loginedIuser(loginedIuser)
                 .build());
+        //delete 실행에 필요한 값들을 가지고 있는 객체(FeedCommentDelDto)를
+        //builder를 이용하여 생성하면서 service.delComment의 파라미터로 사용
     }
 }

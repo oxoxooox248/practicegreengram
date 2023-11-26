@@ -47,6 +47,7 @@ public class UserController {
     @Parameter(name="target_iuser", description = "프로필 주인 유저 pk" )
     public UserInfoVo getUserInfo(@RequestParam("target_iuser") int targetIuser) {
         return service.getUserInfo(targetIuser);
+        //해당 유저(targetIuser)에 대한 nm,pic,createdAt,feedCnt,favCnt를 vo에 담아서 리턴
     }
 
 

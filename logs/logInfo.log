@@ -301,3 +301,26 @@ java.sql.SQLSyntaxErrorException: (conn=595) You have an error in your SQL synta
 [2023-11-26 15:18:41 [32mINFO [0;39m http-nio-8082-exec-7] [practicegreengram.feed.FeedController] [36mdto : FeedDelDto(ifeed=21, iuser=1)[0;39m
 [2023-11-26 15:21:05 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
 [2023-11-26 15:21:05 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2023-11-26 16:12:33 [32mINFO [0;39m restartedMain] [practicegreengram.PracticegreengramApplication] [36mStarting PracticegreengramApplication using Java 17.0.9 with PID 12160 (C:\Users\user3\Desktop\programming\기업요구를 반영한 프로젝트 중심 java 백엔드 테스트 주도 개발자 양성과정\SPRING\practicegreengram\target\classes started by user3 in C:\Users\user3\Desktop\programming\기업요구를 반영한 프로젝트 중심 java 백엔드 테스트 주도 개발자 양성과정\SPRING\practicegreengram)[0;39m
+[2023-11-26 16:12:33 [32mINFO [0;39m restartedMain] [practicegreengram.PracticegreengramApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2023-11-26 16:12:33 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2023-11-26 16:12:33 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2023-11-26 16:12:35 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8082 (http)[0;39m
+[2023-11-26 16:12:35 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8082"][0;39m
+[2023-11-26 16:12:35 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2023-11-26 16:12:35 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.16][0;39m
+[2023-11-26 16:12:35 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2023-11-26 16:12:35 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 2237 ms[0;39m
+[2023-11-26 16:12:36 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page: class path resource [static/index.html][0;39m
+[2023-11-26 16:12:37 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2023-11-26 16:12:37 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8082"][0;39m
+[2023-11-26 16:12:37 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
+[2023-11-26 16:12:37 [32mINFO [0;39m restartedMain] [practicegreengram.PracticegreengramApplication] [36mStarted PracticegreengramApplication in 4.82 seconds (process running for 7.616)[0;39m
+[2023-11-26 16:12:53 [32mINFO [0;39m http-nio-8082-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2023-11-26 16:12:53 [32mINFO [0;39m http-nio-8082-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2023-11-26 16:12:53 [32mINFO [0;39m http-nio-8082-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2023-11-26 16:12:56 [32mINFO [0;39m http-nio-8082-exec-7] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2023-11-26 16:12:57 [32mINFO [0;39m http-nio-8082-exec-7] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection org.mariadb.jdbc.Connection@2fc2391e[0;39m
+[2023-11-26 16:12:57 [32mINFO [0;39m http-nio-8082-exec-7] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2023-11-26 16:14:52 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2023-11-26 16:14:52 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m

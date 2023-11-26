@@ -72,6 +72,7 @@
         insert into t_feed_fav set
         ifeed= #{ifeed}, iuser= #{iuser}
     </insert>
+    <!--로그인한 유저가 실행하는 좋아요 취소-->
     <delete id="delFeedFav">
         delete from t_feed_fav
         where ifeed=#{ifeed} and iuser=#{iuser}
@@ -81,13 +82,13 @@
         delete from t_feed_fav
         where ifeed= #{ifeed}
     </delete>
-    <!--댓글 작성-->
+    <!--댓글 작성(작성 시 생기는 pk를 result에 담아 보내기)-->
     <insert id="insFeedComment" useGeneratedKeys="true" keyProperty="ifeedComment">
         insert into t_feed_comment set
         ifeed= #{ifeed}, iuser=#{iuser},
         comment=#{comment}
     </insert>
-    <!--댓글 더보기-->
+    <!--댓글 보기-->
     <select id="selCommentAll">
         select a.ifeed_comment as ifeedComment,
         a.comment, a.created_at as createdAt,
