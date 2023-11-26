@@ -53,7 +53,6 @@ public class FeedController {
     @Operation(summary = "피드 삭제", description = "로그인한 유저가 실행하는 피드 삭제 처리" +
             "(해당 피드에 대한 좋아요, 사진, 댓글도 모두 삭제 처리)")
     public ResVo delFeed(FeedDelDto dto) {
-        log.info("dto : {}", dto);
         return service.delFeed(dto);
     }
     @GetMapping("/fav")
